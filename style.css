@@ -7,6 +7,7 @@
   --navy-deep: #0a1a30;
   --blue: #2563eb;         /* アクセントのブルー */
   --blue-dark: #1d4ed8;
+  --sky: #7dd3fc;
   --text: #1e293b;
   --muted: #64748b;
   --light: #f1f5f9;        /* ライトグレー */
@@ -17,7 +18,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
 body {
   font-family: "Noto Sans JP", -apple-system, "Segoe UI", sans-serif;
@@ -89,13 +90,27 @@ body {
     radial-gradient(1200px 500px at 80% -10%, rgba(37,99,235,.25), transparent 60%),
     linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%);
   color: #fff;
-  padding: 120px 0;
+  padding: 120px 0 0;
   text-align: center;
 }
-.hero__mission { color: #7dd3fc; font-weight: 700; letter-spacing: .3em; font-size: .85rem; margin-bottom: 20px; }
+.hero__inner { padding-bottom: 80px; }
+.hero__mission { color: var(--sky); font-weight: 700; letter-spacing: .3em; font-size: .85rem; margin-bottom: 20px; }
 .hero__title { font-size: 2.7rem; font-weight: 900; line-height: 1.5; margin-bottom: 24px; }
 .hero__lead { font-size: 1.15rem; color: #cbd5e1; margin-bottom: 40px; }
 .hero__actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* 実績数値バンド */
+.stats {
+  list-style: none; display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 20px; padding: 32px; margin: 0 auto;
+  background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12);
+  border-radius: 16px; transform: translateY(40px);
+}
+.stats__item { text-align: center; color: #fff; position: relative; }
+.stats__item + .stats__item::before { content: ""; position: absolute; left: -10px; top: 50%; transform: translateY(-50%); height: 44px; width: 1px; background: rgba(255,255,255,.15); }
+.stats__num { font-size: 2.6rem; font-weight: 900; color: var(--sky); line-height: 1; }
+.stats__plus, .stats__unit { font-size: 1.2rem; font-weight: 900; color: var(--sky); }
+.stats__label { display: block; font-size: .85rem; color: #cbd5e1; margin-top: 8px; }
 
 /* =========================================================
    セクション共通
@@ -107,10 +122,13 @@ body {
 .section__text { text-align: center; color: var(--muted); max-width: 680px; margin: -28px auto 40px; }
 .section__cta { text-align: center; margin-top: 48px; }
 
+/* 最初のセクション（課題提起）は数値バンドと重ならないよう上に余白 */
+#problem { padding-top: 130px; }
+
 /* =========================================================
    課題提起
 ========================================================= */
-.problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; max-width: 900px; margin: 0 auto; }
+.problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; max-width: 900px; margin: 0 auto; }
 .problem-item {
   background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--blue);
   border-radius: 8px; padding: 20px 24px; font-weight: 500;
@@ -120,6 +138,26 @@ body {
 .problem__close strong { color: var(--blue); }
 
 /* =========================================================
+   4事業の関係性（図解）
+========================================================= */
+.relation {
+  max-width: 760px; margin: 0 auto 56px; padding: 40px;
+  background: #fff; border: 1px solid var(--border); border-radius: 16px; text-align: center;
+}
+.relation__core {
+  width: 150px; height: 150px; margin: 0 auto 24px; border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--blue), var(--navy));
+  color: #fff; font-weight: 900; display: grid; place-items: center; line-height: 1.5;
+  box-shadow: 0 10px 30px rgba(37,99,235,.3);
+}
+.relation__satellites { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+.relation__node {
+  background: var(--light); border: 1px solid var(--border); border-radius: 999px;
+  padding: 10px 22px; font-weight: 700; color: var(--navy); font-size: .95rem;
+}
+.relation__note { color: var(--muted); font-size: .9rem; margin-top: 24px; }
+
+/* =========================================================
    カード（サービス）
 ========================================================= */
 .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
@@ -127,54 +165,60 @@ body {
 .card {
   background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 32px 24px;
   box-shadow: 0 6px 20px rgba(15,36,64,.05); transition: transform .2s ease, box-shadow .2s ease;
+  display: flex; flex-direction: column;
 }
 .card:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(15,36,64,.12); }
 .card__num { font-size: 1.6rem; font-weight: 900; color: var(--blue); opacity: .5; margin-bottom: 8px; }
-.card__title { font-size: 1.1rem; color: var(--navy); margin-bottom: 10px; }
-.card__text { color: var(--muted); font-size: .95rem; }
+.card__title { font-size: 1.1rem; color: var(--navy); margin-bottom: 8px; }
+.card__motto { font-size: .85rem; font-weight: 700; color: var(--blue); margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px dashed var(--border); }
+.card__text { color: var(--muted); font-size: .92rem; margin-bottom: 14px; }
+.card__list { list-style: none; margin-top: auto; }
+.card__list li { font-size: .85rem; color: var(--text); padding-left: 18px; position: relative; line-height: 1.9; }
+.card__list li::before { content: ""; position: absolute; left: 2px; top: .8em; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); }
 
 /* =========================================================
-   強み
+   選ばれる理由（REASONS）
 ========================================================= */
-.strength-list { display: flex; flex-direction: column; gap: 20px; max-width: 860px; margin: 0 auto; }
-.strength {
-  display: flex; gap: 24px; align-items: flex-start;
-  background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 28px 32px;
+.reason {
+  background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 32px 26px;
+  text-align: center; transition: transform .2s ease, box-shadow .2s ease;
 }
-.strength__no {
-  flex: none; width: 52px; height: 52px; border-radius: 50%;
-  background: var(--navy); color: #fff; font-weight: 900; font-size: 1.3rem;
-  display: grid; place-items: center;
+.reason:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(15,36,64,.1); }
+.reason__icon {
+  width: 64px; height: 64px; margin: 0 auto 16px; border-radius: 16px;
+  background: rgba(37,99,235,.1); color: var(--blue); display: grid; place-items: center;
 }
-.strength__title { color: var(--navy); font-size: 1.15rem; margin-bottom: 6px; }
-.strength__text { color: var(--muted); font-size: .95rem; }
+.reason__icon svg { width: 32px; height: 32px; }
+.reason__no { font-size: .75rem; font-weight: 700; letter-spacing: .1em; color: var(--blue); margin-bottom: 8px; }
+.reason__title { color: var(--navy); font-size: 1.05rem; margin-bottom: 10px; }
+.reason__text { color: var(--muted); font-size: .9rem; }
 
 /* =========================================================
    支援実績
 ========================================================= */
 .work {
-  background: var(--navy); color: #fff; border-radius: 14px; padding: 40px 28px; text-align: center;
+  background: var(--navy); color: #fff; border-radius: 14px; padding: 36px 28px; text-align: center;
   transition: transform .2s ease;
 }
 .work:hover { transform: translateY(-6px); }
-.work__tag { display: inline-block; background: rgba(125,211,252,.2); color: #7dd3fc; font-size: .8rem; font-weight: 700; padding: 4px 14px; border-radius: 999px; margin-bottom: 14px; }
-.work__title { font-size: 1.4rem; }
+.work__tag { display: inline-block; background: rgba(125,211,252,.2); color: var(--sky); font-size: .8rem; font-weight: 700; padding: 4px 14px; border-radius: 999px; margin-bottom: 14px; }
+.work__title { font-size: 1.4rem; margin-bottom: 10px; }
+.work__text { font-size: .88rem; color: #cbd5e1; }
 
 /* =========================================================
    プロジェクトの流れ
 ========================================================= */
-.flow { list-style: none; max-width: 720px; margin: 0 auto; counter-reset: none; }
+.flow { list-style: none; max-width: 720px; margin: 0 auto; }
 .flow__step {
-  display: flex; align-items: center; gap: 20px; padding: 18px 24px;
+  display: flex; align-items: center; gap: 20px; padding: 16px 24px;
   background: var(--light); border-radius: 10px; margin-bottom: 14px; font-weight: 500;
-  position: relative;
 }
+.section--alt .flow__step { background: #fff; }
 .flow__no {
   flex: none; width: 40px; height: 40px; border-radius: 50%;
   background: var(--blue); color: #fff; font-weight: 700;
   display: grid; place-items: center;
 }
-.section--alt .flow__step { background: #fff; }
 
 /* =========================================================
    プロフィール
@@ -229,8 +273,11 @@ body {
    フッター
 ========================================================= */
 .footer { background: var(--navy-deep); color: #94a3b8; padding: 48px 0; }
-.footer__inner { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+.footer__inner { display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; }
 .footer__brand { font-weight: 900; color: #fff; font-size: 1.1rem; letter-spacing: .05em; }
+.footer__nav { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+.footer__nav a { color: #cbd5e1; text-decoration: none; font-size: .9rem; }
+.footer__nav a:hover { color: #fff; }
 .footer__copy { font-size: .85rem; }
 
 /* =========================================================
@@ -238,15 +285,20 @@ body {
 ========================================================= */
 @media (max-width: 900px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 24px 0; }
+  .stats__item:nth-child(3)::before, .stats__item:nth-child(2)::before { display: none; }
 }
 @media (max-width: 768px) {
   .nav { display: none; }             /* スマホではグローバルナビを隠し、無料相談ボタンを残す */
-  .hero { padding: 88px 0; }
+  .hero { padding-top: 88px; }
   .hero__title { font-size: 1.8rem; }
   .section { padding: 72px 0; }
+  #problem { padding-top: 96px; }
   .section__title { font-size: 1.6rem; }
   .cards, .cards--3 { grid-template-columns: 1fr; }
-  .strength { flex-direction: row; padding: 22px; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stats__num { font-size: 2.1rem; }
+  .relation { padding: 28px 20px; }
   .profile { flex-direction: column; text-align: center; padding: 32px 24px; }
   .profile__dl { grid-template-columns: 1fr; gap: 2px 0; }
   .profile__dl dt { margin-top: 12px; }

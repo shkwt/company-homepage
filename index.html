@@ -9,7 +9,6 @@
   <meta property="og:title" content="プロジェクトマネジメント支援" />
   <meta property="og:description" content="新規事業・システム開発・DX推進・AI導入をプロジェクトマネージャーとして伴走支援します。" />
   <meta property="og:type" content="website" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Noto Sans JP -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,7 +25,7 @@
       <a href="#hero" class="logo">Project<span>Management</span></a>
       <nav class="nav">
         <a href="#service">サービス</a>
-        <a href="#strength">強み</a>
+        <a href="#reasons">選ばれる理由</a>
         <a href="#works">支援実績</a>
         <a href="#flow">流れ</a>
         <a href="#profile">プロフィール</a>
@@ -44,19 +43,31 @@
       <p class="hero__lead reveal">新規事業・システム開発・DX推進を、企画から実行まで伴走支援します。</p>
       <div class="hero__actions reveal">
         <a href="#contact" class="btn btn--primary btn--lg">無料相談する</a>
-        <a href="#contact" class="btn btn--ghost btn--lg">お問い合わせ</a>
+        <a href="#service" class="btn btn--ghost btn--lg">サービスを見る</a>
       </div>
+    </div>
+    <!-- 実績数値バンド（信頼構築） -->
+    <div class="container">
+      <!-- ▼ 数値は仮です。実数に差し替えてください ▼ -->
+      <ul class="stats reveal">
+        <li class="stats__item"><span class="stats__num">50</span><span class="stats__plus">+</span><span class="stats__label">支援プロジェクト</span></li>
+        <li class="stats__item"><span class="stats__num">4</span><span class="stats__label">対応領域</span></li>
+        <li class="stats__item"><span class="stats__num">95</span><span class="stats__unit">%</span><span class="stats__label">プロジェクト継続率</span></li>
+        <li class="stats__item"><span class="stats__num">15</span><span class="stats__unit">年</span><span class="stats__label">PM実務経験</span></li>
+      </ul>
     </div>
   </section>
 
   <!-- ===== 課題提起 ===== -->
   <section id="problem" class="section">
     <div class="container">
+      <p class="section__eyebrow reveal">PROBLEMS</p>
       <h2 class="section__title reveal">こんなお悩みありませんか？</h2>
       <div class="problem-grid">
         <div class="problem-item reveal">プロジェクトが遅延している</div>
-        <div class="problem-item reveal">PMがいない</div>
+        <div class="problem-item reveal">社内にPMがいない</div>
         <div class="problem-item reveal">ベンダーとの認識が合わない</div>
+        <div class="problem-item reveal">要件が整理できない</div>
         <div class="problem-item reveal">DXが進まない</div>
         <div class="problem-item reveal">AI導入をどう進めればよいかわからない</div>
       </div>
@@ -64,31 +75,72 @@
     </div>
   </section>
 
-  <!-- ===== サービス紹介 ===== -->
+  <!-- ===== サービス ===== -->
   <section id="service" class="section section--alt">
     <div class="container">
       <p class="section__eyebrow reveal">SERVICE</p>
       <h2 class="section__title reveal">サービス</h2>
+      <p class="section__text reveal">プロジェクトマネジメントを中核に、4つの領域で企業の成長を支援します。</p>
+
+      <!-- 4事業の関係性（PMを中核に図解） -->
+      <div class="relation reveal">
+        <div class="relation__core"><span>プロジェクト<br>マネジメント</span></div>
+        <div class="relation__satellites">
+          <div class="relation__node">PMO支援</div>
+          <div class="relation__node">システム開発支援</div>
+          <div class="relation__node">DX・AI導入支援</div>
+        </div>
+        <p class="relation__note">すべての事業は「プロジェクトを成功へ導く」という一点でつながっています。</p>
+      </div>
+
       <div class="cards">
         <div class="card reveal">
           <div class="card__num">01</div>
           <h3 class="card__title">プロジェクトマネジメント支援</h3>
+          <p class="card__motto">計画から完了まで、確実に前進させる</p>
           <p class="card__text">プロジェクト全体を計画・推進・管理します。</p>
+          <ul class="card__list">
+            <li>プロジェクト計画 / WBS作成</li>
+            <li>スケジュール・リスク管理</li>
+            <li>ベンダー管理 / 品質管理</li>
+            <li>定例会運営</li>
+          </ul>
         </div>
         <div class="card reveal">
           <div class="card__num">02</div>
           <h3 class="card__title">PMO支援</h3>
+          <p class="card__motto">組織全体のプロジェクトを最適化</p>
           <p class="card__text">PMや経営層を支援し、プロジェクト全体を最適化します。</p>
+          <ul class="card__list">
+            <li>KPI管理</li>
+            <li>ドキュメント整備</li>
+            <li>課題管理</li>
+            <li>会議運営</li>
+          </ul>
         </div>
         <div class="card reveal">
           <div class="card__num">03</div>
           <h3 class="card__title">システム開発支援</h3>
+          <p class="card__motto">要件定義から開発完了まで伴走</p>
           <p class="card__text">要件定義から開発完了まで伴走します。</p>
+          <ul class="card__list">
+            <li>要件定義</li>
+            <li>RFP作成</li>
+            <li>ベンダー選定</li>
+            <li>開発マネジメント</li>
+          </ul>
         </div>
         <div class="card reveal">
           <div class="card__num">04</div>
           <h3 class="card__title">DX・AI導入支援</h3>
+          <p class="card__motto">変革を、成果につなげる</p>
           <p class="card__text">DX推進やAI導入プロジェクトを成功へ導きます。</p>
+          <ul class="card__list">
+            <li>業務分析</li>
+            <li>PoC支援</li>
+            <li>AI導入支援</li>
+            <li>導入推進</li>
+          </ul>
         </div>
       </div>
       <div class="section__cta reveal">
@@ -97,32 +149,43 @@
     </div>
   </section>
 
-  <!-- ===== 強み ===== -->
-  <section id="strength" class="section">
+  <!-- ===== 選ばれる理由（REASONS） ===== -->
+  <section id="reasons" class="section">
     <div class="container">
-      <p class="section__eyebrow reveal">STRENGTH</p>
-      <h2 class="section__title reveal">強み</h2>
-      <div class="strength-list">
-        <div class="strength reveal">
-          <span class="strength__no">1</span>
-          <div>
-            <h3 class="strength__title">経営視点と現場視点を持つPM</h3>
-            <p class="strength__text">経営と現場、両方の目線でプロジェクトを捉え、最適な意思決定を支えます。</p>
+      <p class="section__eyebrow reveal">REASONS</p>
+      <h2 class="section__title reveal">選ばれる理由</h2>
+      <div class="cards">
+        <div class="reason reveal">
+          <div class="reason__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
           </div>
+          <div class="reason__no">REASON 01</div>
+          <h3 class="reason__title">経営視点と現場視点を持つPM</h3>
+          <p class="reason__text">経営と現場の両方の目線でプロジェクトを捉え、最適な意思決定を支えます。</p>
         </div>
-        <div class="strength reveal">
-          <span class="strength__no">2</span>
-          <div>
-            <h3 class="strength__title">最後まで伴走</h3>
-            <p class="strength__text">立ち上げから振り返りまで、プロジェクトの完了まで責任を持って伴走します。</p>
+        <div class="reason reveal">
+          <div class="reason__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12a8 8 0 1 1 8 8"/><path d="M12 8v4l3 2"/></svg>
           </div>
+          <div class="reason__no">REASON 02</div>
+          <h3 class="reason__title">最後まで伴走</h3>
+          <p class="reason__text">立ち上げから振り返りまで、プロジェクトの完了まで責任を持って伴走します。</p>
         </div>
-        <div class="strength reveal">
-          <span class="strength__no">3</span>
-          <div>
-            <h3 class="strength__title">中立な立場でプロジェクトを成功へ導く</h3>
-            <p class="strength__text">特定のベンダーに偏らず、中立的な立場でプロジェクトの成功を最優先します。</p>
+        <div class="reason reveal">
+          <div class="reason__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18"/><path d="M5 8l7-3 7 3"/><path d="M5 8l-2 6a4 4 0 0 0 8 0L9 8"/><path d="M19 8l-2 6a4 4 0 0 0 8 0"/></svg>
           </div>
+          <div class="reason__no">REASON 03</div>
+          <h3 class="reason__title">中立な立場で成功へ導く</h3>
+          <p class="reason__text">特定のベンダーに偏らず、中立的な立場でプロジェクトの成功を最優先します。</p>
+        </div>
+        <div class="reason reveal">
+          <div class="reason__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          </div>
+          <div class="reason__no">REASON 04</div>
+          <h3 class="reason__title">幅広い対応領域</h3>
+          <p class="reason__text">PM・PMO・システム開発・DX/AI導入まで、一気通貫で支援できます。</p>
         </div>
       </div>
     </div>
@@ -138,14 +201,17 @@
         <div class="work reveal">
           <div class="work__tag">DX推進</div>
           <h3 class="work__title">製造業</h3>
+          <p class="work__text">全社DXの推進をプロジェクトマネージャーとして支援。</p>
         </div>
         <div class="work reveal">
           <div class="work__tag">システム開発PM</div>
           <h3 class="work__title">EC企業</h3>
+          <p class="work__text">基幹システム刷新プロジェクトの計画・推進を担当。</p>
         </div>
         <div class="work reveal">
           <div class="work__tag">PMO支援</div>
           <h3 class="work__title">SaaS企業</h3>
+          <p class="work__text">複数プロジェクトを横断するPMO機能を提供。</p>
         </div>
       </div>
       <div class="section__cta reveal">
@@ -160,14 +226,14 @@
       <p class="section__eyebrow reveal">FLOW</p>
       <h2 class="section__title reveal">プロジェクトの流れ</h2>
       <ol class="flow">
-        <li class="flow__step reveal"><span class="flow__no">1</span>お問い合わせ</li>
-        <li class="flow__step reveal"><span class="flow__no">2</span>ヒアリング</li>
-        <li class="flow__step reveal"><span class="flow__no">3</span>課題整理</li>
-        <li class="flow__step reveal"><span class="flow__no">4</span>ご提案</li>
-        <li class="flow__step reveal"><span class="flow__no">5</span>契約</li>
-        <li class="flow__step reveal"><span class="flow__no">6</span>キックオフ</li>
-        <li class="flow__step reveal"><span class="flow__no">7</span>プロジェクト推進</li>
-        <li class="flow__step reveal"><span class="flow__no">8</span>振り返り</li>
+        <li class="flow__step reveal"><span class="flow__no">1</span><span class="flow__label">お問い合わせ</span></li>
+        <li class="flow__step reveal"><span class="flow__no">2</span><span class="flow__label">ヒアリング</span></li>
+        <li class="flow__step reveal"><span class="flow__no">3</span><span class="flow__label">課題整理</span></li>
+        <li class="flow__step reveal"><span class="flow__no">4</span><span class="flow__label">ご提案</span></li>
+        <li class="flow__step reveal"><span class="flow__no">5</span><span class="flow__label">契約</span></li>
+        <li class="flow__step reveal"><span class="flow__no">6</span><span class="flow__label">キックオフ</span></li>
+        <li class="flow__step reveal"><span class="flow__no">7</span><span class="flow__label">プロジェクト推進</span></li>
+        <li class="flow__step reveal"><span class="flow__no">8</span><span class="flow__label">振り返り</span></li>
       </ol>
     </div>
   </section>
@@ -234,7 +300,7 @@
       <!--
         ▼▼ メール送信について ▼▼
         現在フォームは送信先が未設定です（メール連携は後日対応予定）。
-        Formspree 等を使うと、送信内容を info@example.com 宛のメールで受け取れます。
+        Formspree 等を使うと、送信内容をメールで受け取れます。
         その際は下の action="..." にFormspreeのURLを設定します。
         ▲▲ ここまで ▲▲
       -->
@@ -253,6 +319,12 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">Project Management</div>
+      <nav class="footer__nav">
+        <a href="#service">サービス</a>
+        <a href="#reasons">選ばれる理由</a>
+        <a href="#works">支援実績</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
       <p class="footer__copy">&copy; 2026 プロジェクトマネジメント支援. All rights reserved.</p>
     </div>
   </footer>

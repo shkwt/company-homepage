@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ▼▼ ここのタイトルと説明を自社のものに変えてください ▼▼ -->
+  <title>サンプル株式会社 | あなたの街の◯◯パートナー</title>
+  <meta name="description" content="サンプル株式会社の公式サイトです。サービス内容・会社概要・アクセス・お問い合わせはこちら。" />
+  <!-- ▲▲ ここまで ▲▲ -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== ヘッダー ===== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">サンプル株式会社</a>
+      <nav class="nav">
+        <a href="#about">私たちについて</a>
+        <a href="#services">サービス</a>
+        <a href="#access">アクセス</a>
+        <a href="#contact" class="nav__cta">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== ヒーロー（一番上の大きな見出し） ===== -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <h1 class="hero__title">あなたの街の、<br>頼れる◯◯パートナー。</h1>
+      <p class="hero__lead">ここにキャッチコピーが入ります。お客様に伝えたい一番のメッセージを書きましょう。</p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--primary">お問い合わせ</a>
+        <a href="#services" class="btn btn--ghost">サービスを見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 私たちについて ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section__title">私たちについて</h2>
+      <p class="section__text">
+        ここに会社・お店の紹介文を書きます。どんな想いで、どんなお客様に、どんな価値を届けているのかを
+        3〜4行で伝えると、初めて訪れた人にも安心してもらえます。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== サービス ===== -->
+  <section id="services" class="section section--alt">
+    <div class="container">
+      <h2 class="section__title">サービス</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card__icon">🔧</div>
+          <h3 class="card__title">サービス1</h3>
+          <p class="card__text">サービスの内容をここに書きます。お客様のどんな課題を解決できるかを具体的に。</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">💡</div>
+          <h3 class="card__title">サービス2</h3>
+          <p class="card__text">サービスの内容をここに書きます。他社との違いや強みを添えると効果的です。</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🤝</div>
+          <h3 class="card__title">サービス3</h3>
+          <p class="card__text">サービスの内容をここに書きます。導入の流れや料金の目安があると親切です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== アクセス / 会社概要 ===== -->
+  <section id="access" class="section">
+    <div class="container">
+      <h2 class="section__title">会社概要・アクセス</h2>
+      <table class="info-table">
+        <tr><th>会社名</th><td>サンプル株式会社</td></tr>
+        <tr><th>所在地</th><td>〒000-0000 ◯◯県◯◯市◯◯町1-2-3</td></tr>
+        <tr><th>電話番号</th><td>000-000-0000</td></tr>
+        <tr><th>営業時間</th><td>9:00〜18:00（土日祝を除く）</td></tr>
+        <tr><th>事業内容</th><td>ここに事業内容を記載します。</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== お問い合わせ ===== -->
+  <section id="contact" class="section section--alt">
+    <div class="container contact">
+      <h2 class="section__title">お問い合わせ</h2>
+      <p class="section__text">お気軽にご連絡ください。下記フォームまたはお電話で承ります。</p>
+      <!-- ▼ フォーム送信先はまだ未設定です。Formspree等を使うとメール送信できます（後述） ▼ -->
+      <form class="form" action="#" method="post">
+        <label>お名前<input type="text" name="name" required /></label>
+        <label>メールアドレス<input type="email" name="email" required /></label>
+        <label>お問い合わせ内容<textarea name="message" rows="5" required></textarea></label>
+        <button type="submit" class="btn btn--primary">送信する</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== フッター ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 サンプル株式会社. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

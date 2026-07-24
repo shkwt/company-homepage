@@ -1,0 +1,7 @@
+# OS / エディタが作る不要ファイル
+.DS_Store
+Thumbs.db
+*.log
+
+# 依存パッケージ（今回は使いませんが将来のため）
+node_modules/

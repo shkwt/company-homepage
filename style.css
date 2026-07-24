@@ -204,7 +204,6 @@ body {
 }
 .work:hover { transform: translateY(-6px); box-shadow: 0 16px 34px rgba(15,36,64,.25); }
 .work__tag { align-self: flex-start; background: rgba(125,211,252,.2); color: var(--sky); font-size: .78rem; font-weight: 700; padding: 4px 14px; border-radius: 999px; margin-bottom: 12px; }
-.work__period { font-size: .8rem; color: #94a3b8; font-weight: 700; letter-spacing: .03em; margin-bottom: 6px; }
 .work__title { font-size: 1.12rem; line-height: 1.6; margin-bottom: 12px; }
 .work__text { font-size: .88rem; color: #cbd5e1; margin-bottom: 16px; }
 .work__tech { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }

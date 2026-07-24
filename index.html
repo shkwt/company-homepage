@@ -3,109 +3,260 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- ▼▼ ここのタイトルと説明を自社のものに変えてください ▼▼ -->
-  <title>サンプル株式会社 | あなたの街の◯◯パートナー</title>
-  <meta name="description" content="サンプル株式会社の公式サイトです。サービス内容・会社概要・アクセス・お問い合わせはこちら。" />
-  <!-- ▲▲ ここまで ▲▲ -->
+  <!-- ===== SEO（要件定義書より） ===== -->
+  <title>プロジェクトマネジメント支援 | プロジェクトマネジメントを通して、会社の成長を後押しします</title>
+  <meta name="description" content="新規事業・システム開発・DX推進・AI導入をプロジェクトマネージャーとして伴走支援します。" />
+  <meta property="og:title" content="プロジェクトマネジメント支援" />
+  <meta property="og:description" content="新規事業・システム開発・DX推進・AI導入をプロジェクトマネージャーとして伴走支援します。" />
+  <meta property="og:type" content="website" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ===== ヘッダー ===== -->
+  <!-- ===== ヘッダー（右上に無料相談を固定） ===== -->
   <header class="header">
     <div class="container header__inner">
-      <a href="#" class="logo">サンプル株式会社</a>
+      <a href="#hero" class="logo">Project<span>Management</span></a>
       <nav class="nav">
-        <a href="#about">私たちについて</a>
-        <a href="#services">サービス</a>
-        <a href="#access">アクセス</a>
-        <a href="#contact" class="nav__cta">お問い合わせ</a>
+        <a href="#service">サービス</a>
+        <a href="#strength">強み</a>
+        <a href="#works">支援実績</a>
+        <a href="#flow">流れ</a>
+        <a href="#profile">プロフィール</a>
+        <a href="#faq">FAQ</a>
       </nav>
+      <a href="#contact" class="btn btn--sm btn--primary header__cta">無料相談</a>
     </div>
   </header>
 
-  <!-- ===== ヒーロー（一番上の大きな見出し） ===== -->
-  <section class="hero">
+  <!-- ===== Hero ===== -->
+  <section id="hero" class="hero">
     <div class="container hero__inner">
-      <h1 class="hero__title">あなたの街の、<br>頼れる◯◯パートナー。</h1>
-      <p class="hero__lead">ここにキャッチコピーが入ります。お客様に伝えたい一番のメッセージを書きましょう。</p>
-      <div class="hero__actions">
-        <a href="#contact" class="btn btn--primary">お問い合わせ</a>
-        <a href="#services" class="btn btn--ghost">サービスを見る</a>
+      <p class="hero__mission reveal">MISSION</p>
+      <h1 class="hero__title reveal">プロジェクトマネジメントを通して、<br>会社の成長を後押しします。</h1>
+      <p class="hero__lead reveal">新規事業・システム開発・DX推進を、企画から実行まで伴走支援します。</p>
+      <div class="hero__actions reveal">
+        <a href="#contact" class="btn btn--primary btn--lg">無料相談する</a>
+        <a href="#contact" class="btn btn--ghost btn--lg">お問い合わせ</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== 私たちについて ===== -->
-  <section id="about" class="section">
+  <!-- ===== 課題提起 ===== -->
+  <section id="problem" class="section">
     <div class="container">
-      <h2 class="section__title">私たちについて</h2>
-      <p class="section__text">
-        ここに会社・お店の紹介文を書きます。どんな想いで、どんなお客様に、どんな価値を届けているのかを
-        3〜4行で伝えると、初めて訪れた人にも安心してもらえます。
-      </p>
+      <h2 class="section__title reveal">こんなお悩みありませんか？</h2>
+      <div class="problem-grid">
+        <div class="problem-item reveal">プロジェクトが遅延している</div>
+        <div class="problem-item reveal">PMがいない</div>
+        <div class="problem-item reveal">ベンダーとの認識が合わない</div>
+        <div class="problem-item reveal">DXが進まない</div>
+        <div class="problem-item reveal">AI導入をどう進めればよいかわからない</div>
+      </div>
+      <p class="problem__close reveal">その課題、<strong>プロジェクトマネージャー</strong>が解決します。</p>
     </div>
   </section>
 
-  <!-- ===== サービス ===== -->
-  <section id="services" class="section section--alt">
+  <!-- ===== サービス紹介 ===== -->
+  <section id="service" class="section section--alt">
     <div class="container">
-      <h2 class="section__title">サービス</h2>
+      <p class="section__eyebrow reveal">SERVICE</p>
+      <h2 class="section__title reveal">サービス</h2>
       <div class="cards">
-        <div class="card">
-          <div class="card__icon">🔧</div>
-          <h3 class="card__title">サービス1</h3>
-          <p class="card__text">サービスの内容をここに書きます。お客様のどんな課題を解決できるかを具体的に。</p>
+        <div class="card reveal">
+          <div class="card__num">01</div>
+          <h3 class="card__title">プロジェクトマネジメント支援</h3>
+          <p class="card__text">プロジェクト全体を計画・推進・管理します。</p>
         </div>
-        <div class="card">
-          <div class="card__icon">💡</div>
-          <h3 class="card__title">サービス2</h3>
-          <p class="card__text">サービスの内容をここに書きます。他社との違いや強みを添えると効果的です。</p>
+        <div class="card reveal">
+          <div class="card__num">02</div>
+          <h3 class="card__title">PMO支援</h3>
+          <p class="card__text">PMや経営層を支援し、プロジェクト全体を最適化します。</p>
         </div>
-        <div class="card">
-          <div class="card__icon">🤝</div>
-          <h3 class="card__title">サービス3</h3>
-          <p class="card__text">サービスの内容をここに書きます。導入の流れや料金の目安があると親切です。</p>
+        <div class="card reveal">
+          <div class="card__num">03</div>
+          <h3 class="card__title">システム開発支援</h3>
+          <p class="card__text">要件定義から開発完了まで伴走します。</p>
+        </div>
+        <div class="card reveal">
+          <div class="card__num">04</div>
+          <h3 class="card__title">DX・AI導入支援</h3>
+          <p class="card__text">DX推進やAI導入プロジェクトを成功へ導きます。</p>
+        </div>
+      </div>
+      <div class="section__cta reveal">
+        <a href="#contact" class="btn btn--primary">サービスについて相談する</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 強み ===== -->
+  <section id="strength" class="section">
+    <div class="container">
+      <p class="section__eyebrow reveal">STRENGTH</p>
+      <h2 class="section__title reveal">強み</h2>
+      <div class="strength-list">
+        <div class="strength reveal">
+          <span class="strength__no">1</span>
+          <div>
+            <h3 class="strength__title">経営視点と現場視点を持つPM</h3>
+            <p class="strength__text">経営と現場、両方の目線でプロジェクトを捉え、最適な意思決定を支えます。</p>
+          </div>
+        </div>
+        <div class="strength reveal">
+          <span class="strength__no">2</span>
+          <div>
+            <h3 class="strength__title">最後まで伴走</h3>
+            <p class="strength__text">立ち上げから振り返りまで、プロジェクトの完了まで責任を持って伴走します。</p>
+          </div>
+        </div>
+        <div class="strength reveal">
+          <span class="strength__no">3</span>
+          <div>
+            <h3 class="strength__title">中立な立場でプロジェクトを成功へ導く</h3>
+            <p class="strength__text">特定のベンダーに偏らず、中立的な立場でプロジェクトの成功を最優先します。</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== アクセス / 会社概要 ===== -->
-  <section id="access" class="section">
+  <!-- ===== 支援実績 ===== -->
+  <section id="works" class="section section--alt">
     <div class="container">
-      <h2 class="section__title">会社概要・アクセス</h2>
-      <table class="info-table">
-        <tr><th>会社名</th><td>サンプル株式会社</td></tr>
-        <tr><th>所在地</th><td>〒000-0000 ◯◯県◯◯市◯◯町1-2-3</td></tr>
-        <tr><th>電話番号</th><td>000-000-0000</td></tr>
-        <tr><th>営業時間</th><td>9:00〜18:00（土日祝を除く）</td></tr>
-        <tr><th>事業内容</th><td>ここに事業内容を記載します。</td></tr>
-      </table>
+      <p class="section__eyebrow reveal">WORKS</p>
+      <h2 class="section__title reveal">支援実績</h2>
+      <p class="section__text reveal">※ 守秘のため匿名で掲載しています。</p>
+      <div class="cards cards--3">
+        <div class="work reveal">
+          <div class="work__tag">DX推進</div>
+          <h3 class="work__title">製造業</h3>
+        </div>
+        <div class="work reveal">
+          <div class="work__tag">システム開発PM</div>
+          <h3 class="work__title">EC企業</h3>
+        </div>
+        <div class="work reveal">
+          <div class="work__tag">PMO支援</div>
+          <h3 class="work__title">SaaS企業</h3>
+        </div>
+      </div>
+      <div class="section__cta reveal">
+        <a href="#contact" class="btn btn--primary">プロジェクトについて相談する</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== プロジェクトの流れ ===== -->
+  <section id="flow" class="section">
+    <div class="container">
+      <p class="section__eyebrow reveal">FLOW</p>
+      <h2 class="section__title reveal">プロジェクトの流れ</h2>
+      <ol class="flow">
+        <li class="flow__step reveal"><span class="flow__no">1</span>お問い合わせ</li>
+        <li class="flow__step reveal"><span class="flow__no">2</span>ヒアリング</li>
+        <li class="flow__step reveal"><span class="flow__no">3</span>課題整理</li>
+        <li class="flow__step reveal"><span class="flow__no">4</span>ご提案</li>
+        <li class="flow__step reveal"><span class="flow__no">5</span>契約</li>
+        <li class="flow__step reveal"><span class="flow__no">6</span>キックオフ</li>
+        <li class="flow__step reveal"><span class="flow__no">7</span>プロジェクト推進</li>
+        <li class="flow__step reveal"><span class="flow__no">8</span>振り返り</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== プロフィール ===== -->
+  <section id="profile" class="section section--alt">
+    <div class="container">
+      <p class="section__eyebrow reveal">PROFILE</p>
+      <h2 class="section__title reveal">プロフィール</h2>
+      <div class="profile reveal">
+        <!-- ▼ 顔写真：profile.jpg をこのフォルダに置くと表示されます ▼ -->
+        <div class="profile__photo">PHOTO</div>
+        <div class="profile__body">
+          <h3 class="profile__name">氏名を入力してください</h3>
+          <dl class="profile__dl">
+            <dt>経歴</dt><dd>ここに経歴を記載します。</dd>
+            <dt>得意分野</dt><dd>プロジェクトマネジメント / PMO / システム開発 / DX・AI導入</dd>
+            <dt>保有資格</dt><dd>ここに保有資格を記載します（例：PMP など）。</dd>
+            <dt>ミッション</dt><dd>プロジェクトマネジメントを通して、会社の成長を後押しします。</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq" class="section">
+    <div class="container container--narrow">
+      <p class="section__eyebrow reveal">FAQ</p>
+      <h2 class="section__title reveal">よくあるご質問</h2>
+      <div class="faq reveal">
+        <details class="faq__item">
+          <summary>契約形態は？</summary>
+          <p>準委任契約・スポット契約に対応しています。</p>
+        </details>
+        <details class="faq__item">
+          <summary>全国対応できますか？</summary>
+          <p>オンラインを中心に全国対応しています。</p>
+        </details>
+        <details class="faq__item">
+          <summary>開発会社が決まっていません</summary>
+          <p>ベンダー選定から支援可能です。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 大きなCTA（フッター直前） ===== -->
+  <section class="cta-band">
+    <div class="container reveal">
+      <h2 class="cta-band__title">プロジェクトの成功は、<br>適切なプロジェクトマネジメントから始まります。</h2>
+      <p class="cta-band__lead">まずはお気軽にご相談ください。</p>
+      <a href="#contact" class="btn btn--white btn--lg">無料相談はこちら</a>
     </div>
   </section>
 
   <!-- ===== お問い合わせ ===== -->
-  <section id="contact" class="section section--alt">
-    <div class="container contact">
-      <h2 class="section__title">お問い合わせ</h2>
-      <p class="section__text">お気軽にご連絡ください。下記フォームまたはお電話で承ります。</p>
-      <!-- ▼ フォーム送信先はまだ未設定です。Formspree等を使うとメール送信できます（後述） ▼ -->
-      <form class="form" action="#" method="post">
-        <label>お名前<input type="text" name="name" required /></label>
-        <label>メールアドレス<input type="email" name="email" required /></label>
-        <label>お問い合わせ内容<textarea name="message" rows="5" required></textarea></label>
-        <button type="submit" class="btn btn--primary">送信する</button>
+  <section id="contact" class="section">
+    <div class="container container--narrow">
+      <p class="section__eyebrow reveal">CONTACT</p>
+      <h2 class="section__title reveal">お問い合わせ</h2>
+      <p class="section__text reveal">下記フォームよりお気軽にご相談ください。2営業日以内にご返信いたします。</p>
+
+      <!--
+        ▼▼ メール送信について ▼▼
+        現在フォームは送信先が未設定です（メール連携は後日対応予定）。
+        Formspree 等を使うと、送信内容を info@example.com 宛のメールで受け取れます。
+        その際は下の action="..." にFormspreeのURLを設定します。
+        ▲▲ ここまで ▲▲
+      -->
+      <form class="form reveal" action="#" method="post">
+        <label>会社名<input type="text" name="company" /></label>
+        <label>お名前 <span class="req">必須</span><input type="text" name="name" required /></label>
+        <label>メールアドレス <span class="req">必須</span><input type="email" name="email" required /></label>
+        <label>電話番号<input type="tel" name="tel" /></label>
+        <label>ご相談内容 <span class="req">必須</span><textarea name="message" rows="6" required></textarea></label>
+        <button type="submit" class="btn btn--primary btn--lg">送信する</button>
       </form>
     </div>
   </section>
 
   <!-- ===== フッター ===== -->
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 サンプル株式会社. All rights reserved.</p>
+    <div class="container footer__inner">
+      <div class="footer__brand">Project Management</div>
+      <p class="footer__copy">&copy; 2026 プロジェクトマネジメント支援. All rights reserved.</p>
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>

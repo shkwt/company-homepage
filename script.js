@@ -22,3 +22,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   targets.forEach((el) => observer.observe(el));
 });
+
+// 「無料相談する」ボタンを押したら、お問い合わせフォームへ即座に移動する
+document.addEventListener("DOMContentLoaded", function () {
+  const contact = document.getElementById("contact");
+  if (!contact) return;
+
+  document.querySelectorAll('a[href="#contact"]').forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      // アニメーションなしで即ジャンプ
+      contact.scrollIntoView({ behavior: "auto", block: "start" });
+      history.replaceState(null, "", "#contact");
+    });
+  });
+});

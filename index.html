@@ -309,8 +309,12 @@
       -->
       <form class="form reveal" action="#" method="post">
         <label>
-          <span class="form__head">会社名 <span class="opt">任意</span></span>
-          <input type="text" name="company" placeholder="例：株式会社サンプル" />
+          <span class="form__head">会社名 <span class="req">必須</span></span>
+          <input type="text" name="company" placeholder="例：株式会社サンプル" required />
+        </label>
+        <label>
+          <span class="form__head">会社住所 <span class="req">必須</span></span>
+          <input type="text" name="address" placeholder="例：東京都千代田区◯◯1-2-3" required />
         </label>
         <label>
           <span class="form__head">お名前 <span class="req">必須</span></span>

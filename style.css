@@ -273,12 +273,24 @@ body {
 ========================================================= */
 .form { display: flex; flex-direction: column; gap: 22px; margin-top: 40px; }
 .form label { display: flex; flex-direction: column; gap: 8px; font-weight: 700; font-size: .95rem; color: var(--navy); }
-.req { display: inline-block; background: #dc2626; color: #fff; font-size: .78rem; font-weight: 700; padding: 3px 10px; border-radius: 4px; margin-left: 8px; vertical-align: middle; letter-spacing: .05em; }
-.req::before { content: "※ "; }
+.form__head { display: inline-flex; align-items: center; }
+
+/* 必須・任意ラベル（EFOベストプラクティス：両方を明示し、色で判別） */
+.req, .opt {
+  display: inline-block; font-size: .72rem; font-weight: 700;
+  padding: 3px 10px; border-radius: 4px; margin-left: 10px;
+  letter-spacing: .08em; line-height: 1.5;
+}
+.req { background: #dc2626; color: #fff; }
+.opt { background: #e2e8f0; color: #64748b; }
+
 .form input, .form textarea {
   padding: 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem;
   font-family: inherit; font-weight: 400; color: var(--text);
 }
+.form input::placeholder, .form textarea::placeholder { color: #94a3b8; font-size: .95rem; }
+/* 必須項目は左に赤いラインを付けて未入力でも視認しやすく */
+.form input:required, .form textarea:required { border-left: 3px solid #dc2626; }
 .form input:focus, .form textarea:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(37,99,235,.15); }
 .form button { align-self: center; margin-top: 8px; }
 

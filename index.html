@@ -308,11 +308,26 @@
         ▲▲ ここまで ▲▲
       -->
       <form class="form reveal" action="#" method="post">
-        <label>会社名<input type="text" name="company" /></label>
-        <label>お名前 <span class="req">必須</span><input type="text" name="name" required /></label>
-        <label>メールアドレス <span class="req">必須</span><input type="email" name="email" required /></label>
-        <label>電話番号<input type="tel" name="tel" /></label>
-        <label>ご相談内容 <span class="req">必須</span><textarea name="message" rows="6" required></textarea></label>
+        <label>
+          <span class="form__head">会社名 <span class="opt">任意</span></span>
+          <input type="text" name="company" placeholder="例：株式会社サンプル" />
+        </label>
+        <label>
+          <span class="form__head">お名前 <span class="req">必須</span></span>
+          <input type="text" name="name" placeholder="例：山田 太郎" required />
+        </label>
+        <label>
+          <span class="form__head">メールアドレス <span class="req">必須</span></span>
+          <input type="email" name="email" placeholder="例：sample@example.com" required />
+        </label>
+        <label>
+          <span class="form__head">電話番号 <span class="opt">任意</span></span>
+          <input type="tel" name="tel" placeholder="例：03-1234-5678" />
+        </label>
+        <label>
+          <span class="form__head">ご相談内容 <span class="req">必須</span></span>
+          <textarea name="message" rows="6" placeholder="ご相談内容やお困りごとをご記入ください。" required></textarea>
+        </label>
         <button type="submit" class="btn btn--primary btn--lg">送信する</button>
       </form>
     </div>

@@ -98,6 +98,8 @@ body {
 .hero__title { font-size: 2.7rem; font-weight: 900; line-height: 1.5; margin-bottom: 24px; }
 .hero__lead { font-size: 1.15rem; color: #cbd5e1; margin-bottom: 40px; }
 .hero__actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.hero__note { margin-top: 20px; font-size: .95rem; color: #cbd5e1; }
+.hero__note strong { color: var(--sky); }
 
 /* 実績数値バンド */
 .stats {
@@ -255,6 +257,16 @@ body {
 }
 .cta-band__title { font-size: 1.9rem; font-weight: 900; line-height: 1.6; margin-bottom: 16px; }
 .cta-band__lead { color: #cbd5e1; margin-bottom: 36px; font-size: 1.1rem; }
+
+/* 無料相談の説明ノート */
+.contact-note {
+  display: flex; gap: 16px; align-items: flex-start;
+  max-width: 640px; margin: 0 auto; padding: 20px 24px;
+  background: rgba(37,99,235,.06); border: 1px solid rgba(37,99,235,.2); border-radius: 12px;
+}
+.contact-note__badge { flex: none; background: var(--blue); color: #fff; font-weight: 900; font-size: .8rem; padding: 4px 12px; border-radius: 999px; margin-top: 4px; }
+.contact-note p { font-size: .92rem; color: var(--text); }
+.contact-note strong { color: var(--blue); }
 
 /* =========================================================
    フォーム

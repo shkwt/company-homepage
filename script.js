@@ -23,6 +23,49 @@ document.addEventListener("DOMContentLoaded", function () {
   targets.forEach((el) => observer.observe(el));
 });
 
+// お問い合わせフォーム送信（Google Apps Script 経由でGmailに通知）
+// GAS_URL には gas/contact-form.gs をデプロイして発行されるURLを貼り付ける
+document.addEventListener("DOMContentLoaded", function () {
+  const GAS_URL = "https://script.google.com/macros/s/AKfycbxLBVRBE077uh5eoqB3occ6MnzyCBG1y6BmLglZd7vNndqqex7lYhrfGZ8DcKU_gUG2/exec"; // 例: https://script.google.com/macros/s/XXXX/exec
+
+  const form = document.getElementById("contact-form");
+  if (!form) return;
+  const status = document.getElementById("form-status");
+  const button = form.querySelector('button[type="submit"]');
+
+  function showStatus(message, isError) {
+    status.textContent = message;
+    status.classList.add("is-visible");
+    status.classList.toggle("is-error", isError);
+  }
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    if (!GAS_URL) {
+      showStatus("送信先が未設定です。恐れ入りますが、メールで直接ご連絡ください。", true);
+      return;
+    }
+
+    button.disabled = true;
+    button.textContent = "送信中…";
+    try {
+      const res = await fetch(GAS_URL, {
+        method: "POST",
+        body: new URLSearchParams(new FormData(form)),
+      });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      form.reset();
+      showStatus("送信しました。2営業日以内にご返信いたします。", false);
+    } catch (err) {
+      showStatus("送信に失敗しました。お手数ですが、時間をおいて再度お試しください。", true);
+    } finally {
+      button.disabled = false;
+      button.textContent = "送信する";
+    }
+  });
+});
+
 // 「無料相談する」ボタンを押したら、お問い合わせフォームへ即座に移動する
 document.addEventListener("DOMContentLoaded", function () {
   const contact = document.getElementById("contact");

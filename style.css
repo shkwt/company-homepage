@@ -140,30 +140,11 @@ body {
 .problem__close strong { color: var(--blue); }
 
 /* =========================================================
-   4事業の関係性（図解）
-========================================================= */
-.relation {
-  max-width: 760px; margin: 0 auto 56px; padding: 40px;
-  background: #fff; border: 1px solid var(--border); border-radius: 16px; text-align: center;
-}
-.relation__core {
-  width: 150px; height: 150px; margin: 0 auto 24px; border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, var(--blue), var(--navy));
-  color: #fff; font-weight: 900; display: grid; place-items: center; line-height: 1.5;
-  box-shadow: 0 10px 30px rgba(37,99,235,.3);
-}
-.relation__satellites { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-.relation__node {
-  background: var(--light); border: 1px solid var(--border); border-radius: 999px;
-  padding: 10px 22px; font-weight: 700; color: var(--navy); font-size: .95rem;
-}
-.relation__note { color: var(--muted); font-size: .9rem; margin-top: 24px; }
-
-/* =========================================================
    カード（サービス）
 ========================================================= */
 .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 .cards--3 { grid-template-columns: repeat(3, 1fr); }
+.cards--2 { grid-template-columns: repeat(2, 1fr); max-width: 880px; margin-left: auto; margin-right: auto; }
 .card {
   background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 32px 24px;
   box-shadow: 0 6px 20px rgba(15,36,64,.05); transition: transform .2s ease, box-shadow .2s ease;
@@ -172,11 +153,15 @@ body {
 .card:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(15,36,64,.12); }
 .card__num { font-size: 1.6rem; font-weight: 900; color: var(--blue); opacity: .5; margin-bottom: 8px; }
 .card__title { font-size: 1.1rem; color: var(--navy); margin-bottom: 8px; }
-.card__motto { font-size: .85rem; font-weight: 700; color: var(--blue); margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px dashed var(--border); }
 .card__text { color: var(--muted); font-size: .92rem; margin-bottom: 14px; }
 .card__list { list-style: none; margin-top: auto; }
 .card__list li { font-size: .85rem; color: var(--text); padding-left: 18px; position: relative; line-height: 1.9; }
 .card__list li::before { content: ""; position: absolute; left: 2px; top: .8em; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); }
+.card__list--detail { border-top: 1px dashed var(--border); padding-top: 16px; }
+.card__list--detail li { color: var(--muted); font-size: .88rem; line-height: 1.7; margin-bottom: 14px; }
+.card__list--detail li:last-child { margin-bottom: 0; }
+.card__list--detail li::before { top: .55em; }
+.card__list--detail li strong { display: block; color: var(--navy); font-size: .92rem; font-weight: 700; margin-bottom: 2px; }
 
 /* =========================================================
    選ばれる理由（REASONS）
@@ -214,14 +199,22 @@ body {
 ========================================================= */
 .flow { list-style: none; max-width: 720px; margin: 0 auto; }
 .flow__step {
-  display: flex; align-items: center; gap: 20px; padding: 16px 24px;
-  background: var(--light); border-radius: 10px; margin-bottom: 14px; font-weight: 500;
+  display: grid; grid-template-columns: 40px 1fr; align-items: center;
+  column-gap: 20px; padding: 16px 24px;
+  background: var(--light); border-radius: 10px; margin-bottom: 14px;
 }
 .section--alt .flow__step { background: #fff; }
 .flow__no {
-  flex: none; width: 40px; height: 40px; border-radius: 50%;
+  grid-row: 1 / 3; width: 40px; height: 40px; border-radius: 50%;
   background: var(--blue); color: #fff; font-weight: 700;
   display: grid; place-items: center;
+}
+.flow__label { grid-column: 2; font-weight: 700; color: var(--navy); }
+.flow__desc {
+  grid-column: 2;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--muted);
 }
 
 /* =========================================================
@@ -293,6 +286,9 @@ body {
 .form input::placeholder, .form textarea::placeholder { color: #94a3b8; font-size: .95rem; }
 .form input:focus, .form textarea:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(37,99,235,.15); }
 .form button { align-self: center; margin-top: 8px; }
+.form__status { display: none; text-align: center; font-weight: 700; padding: 14px 20px; border-radius: 8px; background: #ecfdf5; color: #047857; }
+.form__status.is-visible { display: block; }
+.form__status.is-error { background: #fef2f2; color: #dc2626; }
 
 /* =========================================================
    フッター
@@ -320,10 +316,9 @@ body {
   .section { padding: 72px 0; }
   #problem { padding-top: 96px; }
   .section__title { font-size: 1.6rem; }
-  .cards, .cards--3 { grid-template-columns: 1fr; }
+  .cards, .cards--3, .cards--2 { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .stats__num { font-size: 2.1rem; }
-  .relation { padding: 28px 20px; }
   .profile { flex-direction: column; text-align: center; padding: 32px 24px; }
   .profile__dl { grid-template-columns: 1fr; gap: 2px 0; }
   .profile__dl dt { margin-top: 12px; }

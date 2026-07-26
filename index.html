@@ -28,7 +28,7 @@
         <a href="#reasons">選ばれる理由</a>
         <a href="#works">支援実績</a>
         <a href="#flow">流れ</a>
-        <a href="#profile">プロフィール</a>
+        <!-- <a href="#profile">プロフィール</a> プロフィール非表示中はリンクも隠す -->
         <a href="#faq">FAQ</a>
       </nav>
       <a href="#contact" class="btn btn--sm btn--primary header__cta">無料相談する</a>
@@ -76,7 +76,7 @@
         <div class="card reveal">
           <div class="card__num">01</div>
           <h3 class="card__title">プロダクトマネジメント支援</h3>
-          <p class="card__text">「何をつくるべきか」を決めるところから伴走します。市場とユーザーの理解から要件への落とし込み、リリース後の改善まで、プロダクトづくりの意思決定を支えます。</p>
+          <p class="card__text">「何をつくるべきか」を決めるところから伴走します。市場とユーザーの理解から要件への落とし込み、リリース後の改善まで、プロダクトづくりの意思決定と成果創出を支えます。</p>
           <ul class="card__list card__list--detail">
             <li><strong>探索と戦略</strong>ユーザー調査・競合分析・指標設計を通じて、つくるべきものの仮説を固めます。</li>
             <li><strong>要件化</strong>ユースケース定義・PRD作成・バックログ整備など、開発チームが動ける形まで仕様に落とします。</li>
@@ -150,58 +150,49 @@
       <p class="section__text reveal">これまでに手がけた主なプロジェクトです。※ 守秘のため企業名は伏せています。</p>
       <div class="cards cards--3">
         <div class="work reveal">
-          <div class="work__tag">プロジェクトマネジメント支援</div>
-          <h3 class="work__title">大手エネルギー企業 プラットフォームアプリの新規構築</h3>
-          <p class="work__text">アプリ開発側のPMとして、見積もり・要件定義からプロジェクトマネジメント（課題・品質・コスト・納期・人員）、設計・レビューまでを担当。サービス群で価値提供するための基盤を構築。</p>
-          <ul class="work__tech"><li>Flutter</li><li>Swift / Kotlin</li><li>AWS</li><li>20名規模</li></ul>
-        </div>
-        <div class="work reveal">
-          <div class="work__tag">プロジェクトマネジメント支援</div>
-          <h3 class="work__title">大手鉄道企業 車内カメラ映像配信システムの開発</h3>
-          <p class="work__text">PMとして、IPAのドキュメントに基づく非機能要件定義から、課題・品質・コスト・納期・人員の管理、設計・テストのレビューまでを担当。混雑度把握・非常通報通知を実現。</p>
-          <ul class="work__tech"><li>Node.js</li><li>AWS</li><li>20名規模</li></ul>
-        </div>
-        <div class="work reveal">
-          <div class="work__tag">プロジェクトマネジメント支援</div>
-          <h3 class="work__title">大手自動車会社 Web・アプリの運用保守・改善</h3>
-          <p class="work__text">保守・改善チームのリーダーとして、タスク管理方法の導入や要員計画・コスト管理への傾向分析の導入と配置最適化を実施。テストコード拡充により品質も向上。</p>
-          <ul class="work__tech"><li>Java</li><li>PostgreSQL</li><li>AWS</li><li>15名規模</li></ul>
-        </div>
-        <div class="work reveal">
           <div class="work__tag">プロダクトマネジメント支援</div>
           <h3 class="work__title">タレントマネジメントシステムのプロダクトマネジメント</h3>
-          <p class="work__text">PdM兼開発ディレクターとして、ビジネス指標・ロードマップの策定、アジャイル導入によるタスクの定量管理、UI/UX改善を推進中。</p>
-          <ul class="work__tech"><li>Go</li><li>PostgreSQL</li><li>AWS</li><li>13名規模</li></ul>
+          <p class="work__text">ビジネス指標・ロードマップの策定、アジャイル導入によるタスクの定量管理、UI/UX改善を推進。</p>
         </div>
         <div class="work reveal">
           <div class="work__tag">プロダクトマネジメント支援</div>
           <h3 class="work__title">大手銀行 新決済サービスのPoC</h3>
-          <p class="work__text">新サービスの検証フェーズをPMとして支援。ユーザー要件のヒアリングから要件定義・見積もりまで、事業仮説を検証できる形に落とし込み。</p>
-          <ul class="work__tech"><li>Go</li><li>React</li><li>AWS</li><li>20名規模</li></ul>
+          <p class="work__text">新サービスの事業仮説を、検証できる形に落とし込み。ユーザー要件のヒアリング、検証スコープの定義、見積もりを担当。</p>
         </div>
         <div class="work reveal">
           <div class="work__tag">プロダクトマネジメント支援</div>
-          <h3 class="work__title">エンジニア向け職務経歴サービスの企画・開発</h3>
-          <p class="work__text">サービスの企画・設計から新機能企画、デザイン、実装までを一貫して担当。「職歴だけでは測れない価値」を伝えるコンセプトを形に。</p>
-          <ul class="work__tech"><li>Vue.js</li><li>Laravel</li><li>Docker</li></ul>
+          <h3 class="work__title">エンジニア向け職務経歴サービスの企画</h3>
+          <p class="work__text">「職歴だけでは測れない価値」を伝えるコンセプトを形に。サービスの企画・設計から新機能企画、デザイン、実装までを一貫して担当。</p>
+        </div>
+        <div class="work reveal">
+          <div class="work__tag">プロジェクトマネジメント支援</div>
+          <h3 class="work__title">大手エネルギー企業 プラットフォームアプリの新規構築</h3>
+          <p class="work__text">サービス群で価値提供するためのDX推進基盤を構築。</p>
+        </div>
+        <div class="work reveal">
+          <div class="work__tag">プロジェクトマネジメント支援</div>
+          <h3 class="work__title">大手鉄道企業 車内カメラ映像配信システムの開発</h3>
+          <p class="work__text">混雑度把握・非常通報通知を基盤を構築。</p>
+        </div>
+        <div class="work reveal">
+          <div class="work__tag">プロジェクトマネジメント支援</div>
+          <h3 class="work__title">大手自動車会社 Web・アプリの運用保守・改善</h3>
+          <p class="work__text">タスク管理方法の導入や要員計画・コスト管理への傾向分析の導入と開発体制の最適化を実施。テストコード拡充により品質も向上。</p>
         </div>
         <div class="work reveal">
           <div class="work__tag">開発実務経験</div>
           <h3 class="work__title">大手ニュースサイトのリアーキテクチャ・リニューアル</h3>
           <p class="work__text">UX向上に向けたデザイン刷新と開発効率の改善。コンポーネント設計とモダン技術の導入により、開発工数の削減と描画効率の向上を実現。</p>
-          <ul class="work__tech"><li>Next.js</li><li>GraphQL (Apollo)</li></ul>
         </div>
         <div class="work reveal">
           <div class="work__tag">開発実務経験</div>
           <h3 class="work__title">全社共通コンポーネントライブラリの開発</h3>
           <p class="work__text">基本設計から実装・テストまでを担当し、システム間のブランド統一と開発効率化を実現。開発工数を2〜3割削減。</p>
-          <ul class="work__tech"><li>React</li><li>TypeScript</li><li>Storybook</li></ul>
         </div>
         <div class="work reveal">
           <div class="work__tag">開発実務経験</div>
           <h3 class="work__title">大手旅行会社 公式サイトの改修・リアーキテクチャ</h3>
           <p class="work__text">開発体制・環境・開発速度の改善を目的に、基本設計から実装・結合テストまでを担当。サイト不具合の改修も実施。</p>
-          <ul class="work__tech"><li>React</li><li>Yext</li></ul>
         </div>
       </div>
       <div class="section__cta reveal">
@@ -245,13 +236,13 @@
     </div>
   </section>
 
-  <!-- ===== プロフィール ===== -->
+  <!-- ===== プロフィール（一時非表示） =====
   <section id="profile" class="section section--alt">
     <div class="container">
       <p class="section__eyebrow reveal">PROFILE</p>
       <h2 class="section__title reveal">プロフィール</h2>
       <div class="profile reveal">
-        <!-- ▼ 顔写真：profile.jpg をこのフォルダに置くと表示されます ▼ -->
+        ▼ 顔写真：profile.jpg をこのフォルダに置くと表示されます ▼
         <div class="profile__photo">PHOTO</div>
         <div class="profile__body">
           <h3 class="profile__name">川田 翔平</h3>
@@ -265,7 +256,7 @@
       </div>
     </div>
   </section>
-
+  -->
   <!-- ===== FAQ ===== -->
   <section id="faq" class="section">
     <div class="container container--narrow">
@@ -288,14 +279,6 @@
     </div>
   </section>
 
-  <!-- ===== 大きなCTA（フッター直前） ===== -->
-  <section class="cta-band">
-    <div class="container reveal">
-      <h2 class="cta-band__title">プロジェクトの成功は、<br>適切なプロジェクトマネジメントから始まります。</h2>
-      <p class="cta-band__lead">まずはお気軽にご相談ください。ヒアリングからお見積もりまで無料です。</p>
-      <a href="#contact" class="btn btn--white btn--lg">無料相談する</a>
-    </div>
-  </section>
 
   <!-- ===== お問い合わせ ===== -->
   <section id="contact" class="section">

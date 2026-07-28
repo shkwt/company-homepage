@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shkwt.github.io/company-homepage/sitemap.xml
+Sitemap: https://shkwt.github.io/homepage/sitemap.xml

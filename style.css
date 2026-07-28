@@ -299,6 +299,7 @@ body {
 .footer__nav { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
 .footer__nav a { color: #cbd5e1; text-decoration: none; font-size: .9rem; }
 .footer__nav a:hover { color: #fff; }
+.footer__addr { font-size: .85rem; }
 .footer__copy { font-size: .85rem; }
 
 /* =========================================================

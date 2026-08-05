@@ -42,8 +42,13 @@ function doPost(e) {
     }
   }
 
+  var inquiryType = String(p.inquiry_type || "通常の無料相談");
+
   var body = [
     "ホームページの無料相談フォームからお問い合わせがありました。",
+    "",
+    "■ ご相談種別",
+    inquiryType,
     "",
     "■ 会社名",
     p.company,
@@ -67,10 +72,15 @@ function doPost(e) {
     "受信日時: " + Utilities.formatDate(new Date(), "Asia/Tokyo", "yyyy/MM/dd HH:mm"),
   ].join("\n");
 
+  var subjectLabel =
+    inquiryType === "プロジェクト健康診断"
+      ? "健康診断のご相談"
+      : "無料相談のお問い合わせ";
+
   MailApp.sendEmail({
     to: TO_ADDRESS,
     replyTo: String(p.email),
-    subject: "【ホームページ】無料相談のお問い合わせ（" + p.company + " " + p.name + "様）",
+    subject: "【ホームページ】" + subjectLabel + "（" + p.company + " " + p.name + "様）",
     body: body,
   });
 

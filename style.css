@@ -154,7 +154,7 @@ body {
 .card__num { font-size: 1.6rem; font-weight: 900; color: var(--blue); opacity: .5; margin-bottom: 8px; }
 .card__title { font-size: 1.1rem; color: var(--navy); margin-bottom: 8px; }
 .card__text { color: var(--muted); font-size: .92rem; margin-bottom: 14px; }
-.card__list { list-style: none; margin-top: auto; }
+.card__list { list-style: none; }
 .card__list li { font-size: .85rem; color: var(--text); padding-left: 18px; position: relative; line-height: 1.9; }
 .card__list li::before { content: ""; position: absolute; left: 2px; top: .8em; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); }
 .card__list--detail { border-top: 1px dashed var(--border); padding-top: 16px; }
@@ -162,6 +162,8 @@ body {
 .card__list--detail li:last-child { margin-bottom: 0; }
 .card__list--detail li::before { top: .55em; }
 .card__list--detail li strong { display: block; color: var(--navy); font-size: .92rem; font-weight: 700; margin-bottom: 2px; }
+.card__link { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+.card__link:hover { color: var(--blue-dark); }
 
 /* =========================================================
    プロジェクト健康診断（入口商品）
